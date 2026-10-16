@@ -1,0 +1,27 @@
+:root {
+  font-family: Inter, Pretendard, "Noto Sans KR", system-ui, sans-serif;
+  color: #292929;
+  background: #ffffff;
+  --lg-red: #A50034;
+  --lg-gray: #6B6B6B;
+  --text-primary: #292929;
+  --text-secondary: #6B6B6B;
+  --border-color: #e5e7eb;
+  --surface: #ffffff;
+  --surface-subtle: #f7f7f8;
+  --surface-red: #fff4f7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text-primary);
+  background: #ffffff;
+}

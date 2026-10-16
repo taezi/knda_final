@@ -1,0 +1,20 @@
+# Environment variables and local secrets
+.env
+.env.*
+!.env.example
+
+# Frontend build artifacts
+frontend/node_modules/
+frontend/dist/
+
+# Backend build artifacts and local IDE configuration
+backend/.gradle/
+backend/build/
+.gradle-user-home/
+tmp/
+.idea/
+*.iml
+
+# Operating system files
+.DS_Store
+Thumbs.db

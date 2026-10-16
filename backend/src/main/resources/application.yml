@@ -1,0 +1,27 @@
+server:
+  port: ${SERVER_PORT:8080}
+
+spring:
+  application:
+    name: ax-backend
+  config:
+    # Local backend/.env is optional and excluded from Git. Render/Docker uses its own environment variables.
+    import: optional:file:.env[.properties]
+  autoconfigure:
+    # PostgreSQL is connected in a later phase. This keeps the empty project runnable today.
+    exclude: org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration
+
+app:
+  cors:
+    allowed-origin: ${FRONTEND_ORIGIN:http://localhost:5173}
+  news:
+    naver:
+      client-id: ${NAVER_CLIENT_ID:}
+      client-secret: ${NAVER_CLIENT_SECRET:}
+  codex-cli:
+    # Keep disabled for Render/Docker and enable only on the local PC that has Codex CLI logged in.
+    enabled: ${CODEX_CLI_ENABLED:false}
+    command: ${CODEX_CLI_COMMAND:codex}
+    node-directory: ${CODEX_NODE_DIRECTORY:}
+    working-directory: ${CODEX_CLI_WORKING_DIRECTORY:}
+    timeout-seconds: ${CODEX_CLI_TIMEOUT_SECONDS:90}
