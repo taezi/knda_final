@@ -318,7 +318,7 @@ function App() {
       try {
         setError("");
         const response = await fetch(
-          "http://localhost:8080/api/b2b-roi/calculate",
+          "/api/b2b-roi/calculate",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -353,7 +353,7 @@ function App() {
       try {
         setPilotError("");
         const response = await fetch(
-          "http://localhost:8080/api/pilot-validation/analyze",
+          "/api/pilot-validation/analyze",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -388,7 +388,7 @@ function App() {
       try {
         setCompetitionError("");
         const response = await fetch(
-          "http://localhost:8080/api/competitiveness/compare",
+          "/api/competitiveness/compare",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -426,7 +426,7 @@ function App() {
       try {
         setMarketStrategyError("");
         const response = await fetch(
-          "http://localhost:8080/api/market-strategy/recommend",
+          "/api/market-strategy/recommend",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -464,7 +464,7 @@ function App() {
       try {
         setDeliveryError("");
         const response = await fetch(
-          "http://localhost:8080/api/delivery-simulation/analyze",
+          "/api/delivery-simulation/analyze",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -499,7 +499,7 @@ function App() {
       try {
         setManufacturerError("");
         const response = await fetch(
-          "http://localhost:8080/api/manufacturer-feasibility/analyze",
+          "/api/manufacturer-feasibility/analyze",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -582,8 +582,8 @@ function App() {
       setFinalRecommendation(null);
       const response = await fetch(
         generator === "codex"
-          ? "http://localhost:8080/api/final-ax-recommendation/generate"
-          : "http://localhost:8080/api/final-ax-recommendation/scenario",
+          ? "/api/final-ax-recommendation/generate"
+          : "/api/final-ax-recommendation/scenario",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
